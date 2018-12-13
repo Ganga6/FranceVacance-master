@@ -8,11 +8,49 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <StackPanel HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100">
-            <StackPanel Height="1025" Margin="0,0,-1305,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                <TextBlock Margin="300,0,0,0" Text="France Vacance" FontSize="20" TextWrapping="Wrap" HorizontalAlignment="Left" Width="711" Height="155" VerticalAlignment="Stretch"/>
-            </StackPanel>
+    <Grid HorizontalAlignment="Stretch" Margin="0,0,750,0" VerticalAlignment="Stretch">
+        <StackPanel HorizontalAlignment="Left" Height="991" VerticalAlignment="Top" Width="640" Margin="845,0,0,0">
+            <StackPanel Height="865" Margin="0,0,-1305,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <TextBlock  Text="Your bookings" FontSize="20" TextWrapping="Wrap" HorizontalAlignment="Left" Margin="775,0,0,0" Height="335" Width="265"/>
+            </StackPanel >
+            <Button Content="Button" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center" Height="979" Margin="0,0,0,0" VerticalAlignment="Center" Width="1591">
+            <TextBlock Text="List of bookings" FontSize="50" TextWrapping="Wrap" Height="196" Margin="429,0,530.2,0"/>
+            <ListView x:Name="ListView" VerticalContentAlignment="Stretch"  ItemsSource="lol"
+                  SelectedItem="" Margin="389,0,450.2,0" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Height="250" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" BorderBrush="Black"  BorderThickness="1"
+>
+                            <StackPanel Height="250" Width="Auto" Background="#FF0083FF">
+                                <Image    Height="240" HorizontalAlignment="Center" VerticalAlignment="Center" Width="378" Margin="0,0,0,0"/>
+                            </StackPanel>
+                            <StackPanel  Height="auto" Width="auto" Background="AntiqueWhite">
+                                <TextBlock Text="" Margin="0,20,0,0" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center"/>
+                                <TextBlock Text="" Margin="0,20,0,0" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center"/>
+
+                                <StackPanel HorizontalAlignment="Stretch" Height="5" Margin="0,30,0,0" VerticalAlignment="Stretch" Background="Black"/>
+                            </StackPanel>
+                            <StackPanel Height="auto" Width="auto" Margin="0,0,0,0" Background="#FF0083FF"/>
+                            <StackPanel Height="auto" Width="auto" Margin="0,0,0,0" Background="AntiqueWhite" Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                                <TextBlock Text="Price" Margin="0,20,0,0" FontSize="40" FontWeight="Light" HorizontalAlignment="Center"/>
+                                <TextBlock Text ="" Margin="0,20,0,0" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            </StackPanel>
+                            <Button Content="Pay" FontSize="35" Command="{Binding GoPayCommand}" HorizontalAlignment="Right"  VerticalAlignment="Top" />
+
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Content="Button" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
+
+
+
+        </StackPanel>
+        <StackPanel Margin="790,-5,-734,5">
+            <Button Content="Return to main paage" FontSize="20" Margin="50"  HorizontalAlignment="Left" Height="138" VerticalAlignment="Center" Width="410" Background="#33C21D1D" />
+            <Button Content="Log Out" FontSize="20"  VerticalAlignment="Stretch" Height="120" HorizontalAlignment="Left" Width="197" Margin="150,0,0,0" Background="#33FF0D50"/>
         </StackPanel>
 
     </Grid>
